@@ -9,7 +9,7 @@ class Square(Rectangle):
     """A Square class that inherits from Rectangle."""
 
     def __init__(self, size):
-        """Initializes size after validating it and passes it to super class.
+        """Initializes size after validating it and passes it to superclass.
 
         Args:
             size (int): The size of the sides of the square.
@@ -21,4 +21,3 @@ class Square(Rectangle):
     def __str__(self):
         """Returns the informal string representation of the square."""
         return "[Square] {}/{}".format(self.__size, self.__size)
-
