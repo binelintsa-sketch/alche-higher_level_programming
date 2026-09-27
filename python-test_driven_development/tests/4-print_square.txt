@@ -1,0 +1,48 @@
+================================
+How to Use 4-print_square.py
+================================
+
+Importing the function:
+    >>> print_square = __import__('4-print_square').print_square
+
+Printing a square of size 4:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Printing a square of size 1:
+    >>> print_square(1)
+    #
+
+Printing a square of size 0 (prints nothing):
+    >>> print_square(0)
+
+Type validation errors for non-integers:
+    >>> print_square("4")
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> print_square(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+    >>> print_square(2.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Value validation errors for negative integers:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Special case: Negative float raises TypeError instead of ValueError:
+    >>> print_square(-1.5)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer

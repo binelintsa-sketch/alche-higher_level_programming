@@ -1,0 +1,46 @@
+====================================
+How to Use 5-text_indentation.py
+====================================
+
+Importing the function:
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Formatting text with period, question mark, and colon:
+    >>> text_indentation("Hello. World? How: are you")
+    Hello.
+    <BLANKLINE>
+    World?
+    <BLANKLINE>
+    How:
+    <BLANKLINE>
+    are you
+
+Trimming leading spaces after delimiters or start of text:
+    >>> text_indentation("   Leading spaces.   Followed by spaces?   Yes: ok")
+    Leading spaces.
+    <BLANKLINE>
+    Followed by spaces?
+    <BLANKLINE>
+    Yes:
+    <BLANKLINE>
+    ok
+
+Text with no special punctuation:
+    >>> text_indentation("Simple sentence without punctuation")
+    Simple sentence without punctuation
+
+Type validation errors:
+    >>> text_indentation(123)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(["text"])
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
