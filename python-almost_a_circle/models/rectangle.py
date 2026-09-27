@@ -19,9 +19,9 @@ class Rectangle(Base):
         Args:
             width (int): Width of the rectangle (> 0).
             height (int): Height of the rectangle (> 0).
-            x (int, optional): Horizontal position offset (>= 0). Defaults to 0.
-            y (int, optional): Vertical position offset (>= 0). Defaults to 0.
-            id (int, optional): Identifier for the instance. Defaults to None.
+            x (int, optional): Horizontal position offset (>= 0).
+            y (int, optional): Vertical position offset (>= 0).
+            id (int, optional): Identifier for the instance.
         """
         super().__init__(id)
         self.width = width
@@ -95,7 +95,7 @@ class Rectangle(Base):
 
     def display(self):
         """
-        Prints in stdout the Rectangle instance with the character '#'
+        Prints in stdout the Rectangle instance with '#'
         taking care of x and y offsets.
         """
         for _ in range(self.__y):
@@ -114,8 +114,8 @@ class Rectangle(Base):
         Updates attributes of the Rectangle instance.
 
         Args:
-            *args: Position-based arguments in order (id, width, height, x, y).
-            **kwargs: Key/value arguments corresponding to attributes.
+            *args: Position arguments (id, width, height, x, y).
+            **kwargs: Key/value arguments for attributes.
         """
         attributes = ["id", "width", "height", "x", "y"]
         if args and len(args) > 0:
@@ -126,3 +126,13 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if key in attributes:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle."""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+        }
