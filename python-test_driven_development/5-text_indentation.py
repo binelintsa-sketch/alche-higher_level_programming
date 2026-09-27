@@ -8,7 +8,7 @@ after '.', '?', and ':'.
 
 def text_indentation(text):
     """
-    Prints a text with 2 new lines after each of these characters: '.', '?' and ':'.
+    Prints a text with 2 new lines after each of '.', '?' and ':'.
     Removes leading and trailing spaces from each printed line.
 
     Args:
