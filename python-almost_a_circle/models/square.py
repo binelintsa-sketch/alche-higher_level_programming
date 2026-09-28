@@ -18,9 +18,9 @@ class Square(Rectangle):
 
         Args:
             size (int): Size of the square's sides (> 0).
-            x (int, optional): Horizontal position offset (>= 0). Defaults to 0.
-            y (int, optional): Vertical position offset (>= 0). Defaults to 0.
-            id (int, optional): Identifier for the instance. Defaults to None.
+            x (int, optional): Horizontal position offset (>= 0).
+            y (int, optional): Vertical position offset (>= 0).
+            id (int, optional): Identifier for the instance.
         """
         super().__init__(size, size, x, y, id)
 
@@ -46,7 +46,7 @@ class Square(Rectangle):
         Updates attributes of the Square instance.
 
         Args:
-            *args: Position-based arguments (id, size, x, y).
+            *args: Position arguments (id, size, x, y).
             **kwargs: Key/value arguments corresponding to attributes.
         """
         attributes = ["id", "size", "x", "y"]
